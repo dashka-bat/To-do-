@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To DO</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <script>
-      const tasks = [{ name: "shal", status: "todo" }];
-      function render() {
-        const output = document.getElementById("task");
 
-        output.innerHTML = "";
-        for(let i=0; i<tasks.lenght;i++){
-            output.innerHTML+=
-        }
+  <body>
+    <h1 id="header">My To Do List</h1>
+    <button id="button" onclick="createnewtask()">Add New Task</button>
+    <button id="buttonadd"></button>
+    <button id="status"></button>
+    <div class="tasks1">shalaa</div>
+    <div class="tasks1">aygaa</div>
+    <div id="tasks"></div>
+
+    <script>
+      function createnewtask() {
+        const task = prompt("enteryour task");
+        document.getElementById("tasks").innerHTML += (
+          <div class="tasks1">shalaa</div>
+        );
+        console.log(task);
       }
     </script>
   </body>

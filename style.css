@@ -1,0 +1,17 @@
+#header {
+  color: yellowgreen;
+}
+
+#button {
+  width: 10vw;
+  height: 5vh;
+  border: 1px solid greenyellow;
+  border-radius: 20px;
+}
+.tasks1 {
+  width: 20vw;
+  height: 10vh;
+  border: 2px solid yellowgreen;
+  background-color: gray;
+  font-size: 2rem;
+}
