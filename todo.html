@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo list</title>
+  </head>
+  <style>
+    .tasks {
+      width: 20vw;
+      height: 10vh;
+      border: 2px solid yellowgreen;
+      background-color: gray;
+      font-size: 2rem;
+      margin-top: 5px;
+    }
+  </style>
+  <body>
+    <script>
+      const tasks = [
+        { name: "shalaa ugaah", status: "todo" },
+        { name: "ayga", status: "todo" },
+        { name: "duugee zodoh", status: "todo" },
+      ];
+      function render() {
+        const output = document.getElementById("tasks");
+        output.innerHTML = "";
+        for (let i = 0; i < tasks.length; i++) {
+          output.innerHTML += '<div class="tasks">' + tasks[i].name + "</div>";
+        }
+      }
+      function addTask() {
+        const name = prompt();
+        tasks.push({ name: name, status: "todo" });
+        render();
+      }
+
+      render();
+    </script>
+  </body>
+</html>

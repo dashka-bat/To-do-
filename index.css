@@ -1,0 +1,66 @@
+#background {
+  background-image: url(business-idea-doodle-seamless-pattern-background-business-success-creative-idea-concept-doodle-drawn-sketch-style-pattern-with-lightbulb-megaphone-calendar-element-vector_253081-1622.avif);
+}
+.tasks {
+  border: 2px solid black;
+  border-radius: 4px;
+  height: 5vh;
+  width: 30vw;
+  background-color: yellowgreen;
+
+  color: black;
+  margin-left: 27vw;
+  margin-top: 2vh;
+  font-size: 2rem;
+  display: flex;
+
+  align-items: center;
+}
+#addtaskbutton {
+  width: 5vw;
+  height: 5vh;
+  background-color: yellowgreen;
+  color: black;
+  font-size: 3rem;
+  border-radius: 50px;
+}
+#title {
+  color: darkolivegreen;
+  font-size: 4rem;
+  width: fit-content;
+  margin: auto;
+  margin-top: 25vh;
+}
+#taskwrite {
+  width: 40vw;
+  height: 6vh;
+  background-color: yellowgreen;
+  color: black;
+  font-size: 2rem;
+  border-radius: 1rem;
+  margin-left: 27vw;
+}
+#deletetask {
+  width: 5vw;
+  height: 5vh;
+  background-color: darkgray;
+  color: black;
+  font-size: 3rem;
+  border-radius: 50px;
+}
+#delete {
+  width: 5vw;
+  height: 5vh;
+  background-color: lightblue;
+  color: black;
+  font-size: 3rem;
+
+  margin-left: 12vw;
+}
+#edit {
+  width: 5vw;
+  height: 5vh;
+  background-color: darkmagenta;
+  color: black;
+  font-size: 3rem;
+}

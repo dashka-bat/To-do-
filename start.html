@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todoneg</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="background">
+    <h1 id="title">Task list</h1>
+    <div>
+      <input id="taskwrite" type="text" placeholder="task to be done ..." />
+      <button id="addtaskbutton" onclick="addtask();">+</button>
+    </div>
+    <section id="background"></section>
+    <div id="tasks">
+      <button id="delete">-</button>
+      <button id="edit"></button>
+    </div>
+
+    <script>
+      const tasks = [];
+      function render() {
+        const output = document.getElementById("tasks");
+        output.innerHTML = "";
+        for (let i = 0; i < tasks.length; i++) {
+          output.innerHTML +=
+            '<div class="tasks"><button id="edit"></button>' +
+            tasks[i].name +
+            '<button id="delete">-</button></div>';
+        }
+      }
+      function addtask() {
+        const name = taskwrite.value;
+        tasks.push({ name: name, status: "todo" });
+        render();
+      }
+
+      render();
+    </script>
+  </body>
+</html>
