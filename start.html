@@ -10,22 +10,26 @@
     <h1 id="title">Task list</h1>
     <div>
       <input id="taskwrite" type="text" placeholder="task to be done ..." />
-      <button id="addtaskbutton" onclick="addtask();">+</button>
+
+      <button id="addtaskbutton" onclick="addtask()">+</button>
+      <button id="deleteall" onclick="deleteAll()">delete all</button>
+      <input id="status" type="status" />
     </div>
     <section id="background"></section>
     <div id="tasks">
-      <button id="delete">-</button>
-      <button id="edit"></button>
+      <input id="checkbox" type="checkbox" />
+      <button id="delete" onclick="deleteone();">-</button>
+      <button id="edit" onclick="editone()">&</button>
     </div>
 
     <script>
-      const tasks = [];
+      let tasks = [];
       function render() {
         const output = document.getElementById("tasks");
         output.innerHTML = "";
         for (let i = 0; i < tasks.length; i++) {
           output.innerHTML +=
-            '<div class="tasks"><button id="edit"></button>' +
+            '<div class="tasks"><input type="checkbox" /><button id="edit">&</button>' +
             tasks[i].name +
             '<button id="delete">-</button></div>';
         }
@@ -36,6 +40,26 @@
         render();
       }
 
+      render();
+      function deleteone() {
+        let array = [];
+        for (let i = 0; i < tasks.length; i++) {
+          if (i !== index) {
+            array.push(tasks[i]);
+          }
+        }
+        tasks = array;
+        render();
+      }
+      function deleteAll() {
+        tasks = [];
+        console.log(tasks);
+        render();
+      }
+      function editone() {
+        alert("sadasdasd");
+        render();
+      }
       render();
     </script>
   </body>

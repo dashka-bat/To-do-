@@ -5,7 +5,7 @@
   border: 2px solid black;
   border-radius: 4px;
   height: 5vh;
-  width: 30vw;
+  width: fit-content;
   background-color: yellowgreen;
 
   color: black;
@@ -18,7 +18,7 @@
 }
 #addtaskbutton {
   width: 5vw;
-  height: 5vh;
+  height: fit-content;
   background-color: yellowgreen;
   color: black;
   font-size: 3rem;
@@ -60,7 +60,18 @@
 #edit {
   width: 5vw;
   height: 5vh;
-  background-color: darkmagenta;
+  background-color: white;
   color: black;
   font-size: 3rem;
+}
+#deleteall {
+  width: fit-content;
+  height: 5vh;
+  background-color: yellowgreen;
+  color: black;
+  font-size: 2rem;
+  border-radius: 50px;
+}
+#checkbox {
+  text-decoration-line: overline;
 }
