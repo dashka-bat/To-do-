@@ -21,6 +21,7 @@
       <button id="delete" onclick="deleteone();">-</button>
       <button id="edit" onclick="editone()">&</button>
     </div>
+  
 
     <script>
       let tasks = [];
@@ -29,10 +30,11 @@
         output.innerHTML = "";
         for (let i = 0; i < tasks.length; i++) {
           output.innerHTML +=
-            '<div class="tasks"><input type="checkbox" /><button id="edit">&</button>' +
+            '<div class="tasks"><input type="checkbox" /><button id="edit" onclick="editone()">&</button>' +
             tasks[i].name +
-            '<button id="delete">-</button></div>';
-        }
+            '<button id="delete" onclick="deleteone();">-</button></div>';
+          }
+          render()
       }
       function addtask() {
         const name = taskwrite.value;
@@ -41,26 +43,36 @@
       }
 
       render();
-      function deleteone() {
+      function deleteone(
+
+      ) {
+        
         let array = [];
         for (let i = 0; i < tasks.length; i++) {
-          if (i !== index) {
+          
+          if (i !== i) {
             array.push(tasks[i]);
           }
         }
         tasks = array;
         render();
       }
-      function deleteAll() {
+      function deleteAll() { 
         tasks = [];
         console.log(tasks);
         render();
       }
       function editone() {
-        alert("sadasdasd");
+        
+       prompt("edit name")
+
         render();
       }
+      
+        
+      
       render();
+
     </script>
   </body>
 </html>
