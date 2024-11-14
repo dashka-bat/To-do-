@@ -11,23 +11,29 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete_forever" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=edit" />
+    
   </head>
   <body id="background">
     <h1 id="title">Task list</h1>
     <div>
       <input id="taskwrite" type="text" placeholder="task to be done ..." />
 
-      <button id="addtaskbutton" onclick="addtask()">+</button>
+      <button id="addtaskbutton" onclick="addtask()">
+       +
+      </button>
       <button id="deleteall" onclick="deleteAll()">delete all</button>
     </div>
     <section id="background"></section>
     <div id="tasks">
       <input id="check-box" type="checkbox" />
       <button id="delete" onclick="deleteone();">
+        <img id="deleteicon" src="delete_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png" alt="">
       </button>
-      <button id="edit" onclick="editone()">&</button>
+      <button id="edit" onclick="editone()">
+        <span class="material-symbols-outlined">edit</span>
+      </button>
     </div>
 
     <script>
@@ -39,11 +45,11 @@
           output.innerHTML +=
             '<div class="tasks"><input id="check-box" type="checkbox" /><button id="edit" onclick="editone(' +
             i +
-            ')"><span class="material-symbols-outlined">edit</span> </button><h2 id="text"> ' +
+            ')"><span id="editicon" class="material-symbols-outlined">edit</span></button><h2 id="text"> ' +
             tasks[i].name +
             '</h2><button id="delete" onclick="deleteone(' +
             i +
-            ');"><span class="material-symbols-outlined"> delete_forever </span></button></div>';
+            ');"><img id="deleteicon" src="delete_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png" alt=""></button></div>';
         }
       }
       function addtask() {
