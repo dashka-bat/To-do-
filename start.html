@@ -44,6 +44,7 @@
       function render() {
         const output = document.getElementById("tasks");
         output.innerHTML = "";
+        
 
         for (let i = 0; i < tasks.length; i++) {
           output.innerHTML +=
@@ -58,10 +59,7 @@
               
               
               
-              if(a==""){
-                let a=taskwrite.value
-                alert("write list!!")
-                render()
+              
               
               
             }
@@ -79,7 +77,8 @@
               });
             });
           }
-        }
+          
+        
         render();
       function addtask() {
         const name = taskwrite.value;
