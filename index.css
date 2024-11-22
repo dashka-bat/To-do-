@@ -1,27 +1,25 @@
 /*responsive*/
-@media screen and (max-width:930px){
-  #deleteall{
+@media screen and (max-width: 930px) {
+  #deleteall {
     display: none;
   }
-  
 }
-@media screen and (max-width:800px) {
-  #addtaskbutton{
+@media screen and (max-width: 800px) {
+  #addtaskbutton {
     font-size: 1;
     border-radius: 20px;
   }
-
 }
-@media screen and (max-width:400px) {
-  #text{
+@media screen and (max-width: 400px) {
+  #text {
     font-size: 12px;
   }
-  #title{
+  #title {
     font-size: 20px;
   }
-  
-    
-  
+  #taskwrite {
+    margin-left: 1rem;
+  }
 }
 * {
   font-family: "Roboto", serif;
@@ -62,7 +60,6 @@
 #addtaskbutton:hover {
   transition: 0.5s;
   transform: scale(0.9);
-  ;
   color: rgb(151, 148, 148);
   border-color: rgba(0, 183, 255, 0.574);
 }
@@ -84,6 +81,7 @@
   border-radius: 4px;
   border: 6px solid lightseagreen;
   margin-left: 27vw;
+  text-transform: uppercase;
 }
 #deletetask {
   width: 5vw;
@@ -104,7 +102,7 @@
   justify-content: center;
   margin-left: 12vw;
 }
-#delete:hover{
+#delete:hover {
   transform: scale(0.9);
 }
 #edit {
@@ -125,6 +123,7 @@
   font-size: 2rem;
   border-radius: 4px;
   border: 2px solid lightseagreen;
+  text-transform: uppercase;
 }
 #deleteall:hover {
   transition: 0.5s;
@@ -134,11 +133,13 @@
 }
 #text {
   font-size: 2rem;
-  color:rgba(1, 1, 1, 0.739);
+  color: rgba(1, 1, 1, 0.739);
   text-transform: uppercase;
 }
 #check-box {
   width: 60px;
   height: 30px;
-  
+}
+#task1 {
+  width: fit-content;
 }

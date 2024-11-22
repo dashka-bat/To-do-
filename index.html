@@ -44,42 +44,33 @@
       function render() {
         const output = document.getElementById("tasks");
         output.innerHTML = "";
-        
 
         for (let i = 0; i < tasks.length; i++) {
           output.innerHTML +=
-          '<div class="tasks"><input id="check-box" type="checkbox" /><button id="edit" onclick="editone(' +
+            '<div id="task1" class="tasks"><input id="check-box" type="checkbox" /><button id="edit" onclick="editone(' +
             i +
             ')"><span id="editicon" class="material-symbols-outlined">edit</span></button><h2 id="text"> ' +
-              tasks[i].name +
-              '</h2><button id="delete" onclick="deleteone(' +
-              i +
-              ');"><span class="material-symbols-outlined"> delete </span></button></div>';
-              
-              
-              
-              
-              
-              
-              
+            tasks[i].name +
+            '</h2><button id="delete" onclick="deleteone(' +
+            i +
+            ');"><span class="material-symbols-outlined"> delete </span></button></div>';
+        }
+        const checkboxes = document.querySelectorAll("#check-box");
+        const textElements = document.querySelectorAll("#text");
+        checkboxes.forEach((checkbox, index) => {
+          checkbox.addEventListener("click", function () {
+            const textElement = textElements[index];
+            // Toggle the line-through style
+            if (checkbox.checked) {
+              textElement.style.textDecoration = "line-through";
+            } else {
+              textElement.style.textDecoration = "none";
             }
-            const checkboxes = document.querySelectorAll("#check-box");
-            const textElements = document.querySelectorAll("#text");
-            checkboxes.forEach((checkbox, index) => {
-              checkbox.addEventListener("click", function () {
-                const textElement = textElements[index];
-                // Toggle the line-through style
-                if (checkbox.checked) {
-                  textElement.style.textDecoration = "line-through";
-                } else {
-                  textElement.style.textDecoration = "none";
-                }
-              });
-            });
-          }
-          
-        
-        render();
+          });
+        });
+      }
+
+      render();
       function addtask() {
         const name = taskwrite.value;
         tasks.push({ name: name, status: "todo" });
